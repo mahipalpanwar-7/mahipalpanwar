@@ -149,7 +149,7 @@ func main() {
 	r.HandleFunc("/course{id}", getOneCourse).Methods("GET")
 	r.HandleFunc("/course", createOneCourse).Methods("POST")
 	r.HandleFunc("/course{id}", updateOneCourse).Methods("PUT")
-	r.HandleFunc("/course{}", deleteOneCourse).Methods("DELETE")
+	r.HandleFunc("/course{id}", deleteOneCourse).Methods("DELETE")
 
 	// listening to a port
 	log.Fatal(http.ListenAndServe(":8000", r))
